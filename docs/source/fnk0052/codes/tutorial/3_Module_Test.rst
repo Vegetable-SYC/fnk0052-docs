@@ -52,6 +52,9 @@ If the terminal displays the directory as below (where test.py is located). You 
 
     $ sudo python test.py Servo
 
+.. image:: ../_static/imgs/3_Module_Test/Chapter3_02.png
+    :align: center
+
 Result
 ================================================================
 
@@ -199,6 +202,7 @@ There is an LED module on the robot, as shown below:
 .. image:: ../_static/imgs/3_Module_Test/Chapter3_08.png
     :align: center
     :width: 30%
+
 Run program
 ================================================================
 
