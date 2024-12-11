@@ -1,5 +1,5 @@
 ##############################################################################
-Freenove
+Freenove Big Hexapod Robot Kit for Raspberry Pi
 ##############################################################################
 
 .. toctree::
@@ -39,6 +39,6 @@ Freenove
 
 .. toctree::
    :titlesonly:
-   :caption: what_s_next
+   :caption: What's Next?
 
    codes/tutorial/WhatsNext.rst

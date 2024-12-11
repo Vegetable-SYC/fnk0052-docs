@@ -14,23 +14,23 @@ In this chapter, we will make some necessary preparation: start your Pi Raspberr
     
     3.If you are using remote desktop to login Raspberry Pi, you need to use VNC viewer.
 
-You can refer to this video. https://www.youtube.com/watch?v=_w_dp9LDZyc
+You can refer to this video. https://www.youtube.com/watch?v=cVrwOoORItE
 
 .. raw:: html
 
-   <iframe height="500" width="690" src="https://www.youtube.com/embed/_w_dp9LDZyc" frameborder="0" allowfullscreen></iframe>
+   <iframe height="500" width="690" src="https://www.youtube.com/embed/cVrwOoORItE" frameborder="0" allowfullscreen></iframe>
 
 Step 1 Obtain the Code and Set python3 as Default
 ****************************************************************
 
 To download the code, you can power Raspberry Pi with a power supply cable or switch on S1 (Power Switch). Then open the Raspberry Pi and the terminal. You can open the terminal by clicking as shown below, or you can press “CTRL + ALT + T” on the desktop.
 
-.. image:: ../_static/imgs/Chapter_1_Software_installation/Chapter1_01.png
+.. image:: ../_static/imgs/1_Software_installation/Chapter1_01.png
     :align: center
 
 The terminal is shown below:
 
-.. image:: ../_static/imgs/Chapter_1_Software_installation/Chapter1_02.png
+.. image:: ../_static/imgs/1_Software_installation/Chapter1_02.png
     :align: center
 
 Open the terminal and type the following commands to obtain the car code. And the code will be placed in the directory "Pi". (Note: Here are two commands. Please execute them in order.)
@@ -40,7 +40,7 @@ Open the terminal and type the following commands to obtain the car code. And th
     $ cd
     $ git clone --depth 1 https://github.com/Freenove/Freenove_Big_Hexapod_Robot_Kit_for_Raspberry_Pi.git
 
-.. image:: ../_static/imgs/Chapter_1_Software_installation/Chapter1_03.png
+.. image:: ../_static/imgs/1_Software_installation/Chapter1_03.png
     :align: center
 
 Downloading takes some time. Please wait with patience. 
@@ -56,7 +56,7 @@ Set Python3 as default python (Necessary)
 
 First, execute python to check the default python on your Raspberry Pi. Press Ctrl-Z to exit.
 
-.. image:: ../_static/imgs/Chapter_1_Software_installation/Chapter1_04.png
+.. image:: ../_static/imgs/1_Software_installation/Chapter1_04.png
 
 If it is python3, you can skip this section.
 
@@ -86,7 +86,7 @@ If it is python3, you can skip this section.
 
     $ python 
 
-.. image:: ../_static/imgs/Chapter_1_Software_installation/Chapter1_05.png
+.. image:: ../_static/imgs/1_Software_installation/Chapter1_05.png
     :align: center
 
 If you want to set python2 as default python in **other projects**, just repeat the commands above and change python3 to python2.
@@ -104,12 +104,12 @@ When you need to type commands, pressing “↑” will go backwards through the
 
 As shown below, under the '~'directory, enter the Documents directory with the “cd” command. After typing “cd D”, press Tab key, then there is no response. Press Tab key again, then all the files/folders that begin with “D” is listed. Continue to type the character "oc", then press the Tab key, and then “Documents” is completely typed automatically.
 
-.. image:: ../_static/imgs/Chapter_1_Software_installation/Chapter1_06.png
+.. image:: ../_static/imgs/1_Software_installation/Chapter1_06.png
     :align: center
 
 |
 
-.. image:: ../_static/imgs/Chapter_1_Software_installation/Chapter1_07.png
+.. image:: ../_static/imgs/1_Software_installation/Chapter1_07.png
     :align: center
 
 Step 2 Configuration
@@ -120,9 +120,9 @@ Enable I2C and VNC
 
 The I2C interface Raspberry Pi is disabled by default. You need to open it manually. 
 
-.. image:: ../_static/imgs/Chapter_1_Software_installation/Chapter1_08.png
+.. image:: ../_static/imgs/1_Software_installation/Chapter1_08.png
 
-.. image:: ../_static/imgs/Chapter_1_Software_installation/Chapter1_09.png
+.. image:: ../_static/imgs/1_Software_installation/Chapter1_09.png
     :align: center
 
 Type a command to check whether the I2C module is enabled:
@@ -133,7 +133,7 @@ Type a command to check whether the I2C module is enabled:
 
 If I2C module has been enabled, the following content will show up (the numbers showing in your device may be different):
 
-.. image:: ../_static/imgs/Chapter_1_Software_installation/Chapter1_10.png
+.. image:: ../_static/imgs/1_Software_installation/Chapter1_10.png
     :align: center
 
 Install I2C-Tools
@@ -159,13 +159,13 @@ Type the following command to install python-smbus:
 Communication test
 ----------------------------------------------------------------
 
-The smart car board has two chips, PCF8591 and PCA9685. Their I2C addresses are 0X48 and 0X40 respectively. Command “i2cdetect –y 1” can detect whether the board is successfully connected to Raspberry Pi.
+The smart car board has two chips, PCF8591 and PCA9685. Their I2C addresses are 0X48 and 0X40 respectively. Command “i2cdetect -y 1” can detect whether the board is successfully connected to Raspberry Pi.
 
 .. code-block:: console
 
     $ i2cdetect -y 1
 
-.. image:: ../_static/imgs/Chapter_1_Software_installation/Chapter1_11.png
+.. image:: ../_static/imgs/1_Software_installation/Chapter1_11.png
     :align: center
 
 If an I2C device is connected to your RPI, its I2C address will be displayed here.
@@ -187,7 +187,7 @@ Add following content: After adding the contents, you need to press Ctrl+O, Ente
 
     $ blacklist snd_bcm2835
 
-.. image:: ../_static/imgs/Chapter_1_Software_installation/Chapter1_12.png
+.. image:: ../_static/imgs/1_Software_installation/Chapter1_12.png
     :align: center
 
 2.	We also need to edit config file.
@@ -210,7 +210,7 @@ Add # to comment out the second line. Press Ctrl+O, Enter, Ctrl+X.
     # Enable audio (loads snd_bcm2835)
     # dtparam=audio=on
 
-.. image:: ../_static/imgs/Chapter_1_Software_installation/Chapter1_13.png
+.. image:: ../_static/imgs/1_Software_installation/Chapter1_13.png
     :align: center
 
 It will take effect after restarting, and you can restart after executing the next section. 
@@ -234,7 +234,7 @@ Step 3 Run the Libraries Installation Program
 
 This program will automatically install the pca9685, rpi_ws281x, PyQt5 library, etc. Please reboot the Raspberry Pi after the installation is completed, as shown below.
 
-.. image:: ../_static/imgs/Chapter_1_Software_installation/Chapter1_14.png
+.. image:: ../_static/imgs/1_Software_installation/Chapter1_14.png
     :align: center
 
 If the installation fails, please rerun setup.py. After the installation is completed, restart the Raspberry Pi. Most installation failures are caused by network reasons.

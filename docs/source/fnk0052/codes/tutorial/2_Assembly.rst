@@ -273,3 +273,41 @@ Installing head
 .. |Chapter2_36| image:: ../_static/imgs/2_Assembly/Chapter2_36.png
 .. |Chapter2_37| image:: ../_static/imgs/2_Assembly/Chapter2_37.png
 .. |Chapter2_38| image:: ../_static/imgs/2_Assembly/Chapter2_38.png
+
+Connecting Wires of Camera and Ultrasonic Module
+================================================================
+
+Connect camera wire
+
+.. image:: ../_static/imgs/2_Assembly/Chapter2_39.png
+    :align: center
+
+:blue:`You need power off Raspberry Pi when wire camera.`
+
+After connected, it should be as follows
+
+.. image:: ../_static/imgs/2_Assembly/Chapter2_40.png
+    :align: center
+
+Connecting Ultrasonic Module
+
+.. note::
+    
+    VCC, Echo, Trig, GND are connected to VCC, Echo, Trig and GND on the connection board respectively. Do NOT connect them wrongly. Otherwise, it may burn out the Ultrasonic module.
+
+.. image:: ../_static/imgs/2_Assembly/Chapter2_41.png
+    :align: center
+
+Step 6 Installing Base and Cover Plates
+****************************************************************
+
+.. image:: ../_static/imgs/2_Assembly/Chapter2_42.png
+    :align: center
+
+|
+
+
+.. image:: ../_static/imgs/2_Assembly/Chapter2_43.png
+    :align: center
+
+Congratulations! You have finished the assembly of the robot.
